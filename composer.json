@@ -29,5 +29,15 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "LaravelFaker": "DevNullIr\\LaravelFaker\\core\\Facade\\LaravelFaker"
+            },
+            "providers": [
+                "DevNullIr\\LaravelFaker\\core\\Provider\\LaravelFakerAppProvider"
+            ]
+        }
     }
 }
