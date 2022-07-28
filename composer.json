@@ -1,0 +1,33 @@
+{
+    "name": "devnull-ir/laravel-faker",
+    "description": "description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali",
+            "email": "alishahbazpor110@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": ">=v6.20.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=9.5.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevNullIr\\LaravelFaker\\": "src"
+        },
+        "files": [
+            "src/core/helper/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
