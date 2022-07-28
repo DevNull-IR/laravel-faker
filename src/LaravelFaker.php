@@ -11,6 +11,11 @@ class LaravelFaker
 {
     use MakerName, address, number, Strings;
 
+    public function __get(string $name)
+    {
+        return $this->$name();
+    }
+
     public function Create(): object
     {
         return new LaravelFaker();
