@@ -192,4 +192,9 @@ Configure Automatic Updates درGroup Policy Editor - gpedit.msc بــا وار
         ];
         return Str::random(10) . $emailPath[rand(0, 1)];
     }
+
+    public function slug(int $CountChar = 15): string
+    {
+        return Str::slug(substr(str_shuffle(" - qwe rtyuiop asdfghjkl zxcvbnm01 234567 89QWSKSDFHS JDFHSKJD FHSODFWEIF J"), 0, $CountChar));
+    }
 }

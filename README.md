@@ -32,4 +32,5 @@ Use This NameSpace:  `use DevNullIr\LaravelFaker\core\Facade\LaravelFaker;`
 | `LaravelFaker::getMultiAddress(int $range = 3)` | Generate getMultiAddress |
 | `LaravelFaker::city()` | Generate city |
 | `LaravelFaker::userAgent()` | Generate userAgent |
+| `LaravelFaker::slug(int $CountChar = 15)` | Generate slug |
 

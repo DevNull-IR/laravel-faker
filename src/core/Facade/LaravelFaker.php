@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static object Create()
  * @method static string lastName()
  * @method static string userAgent()
+ * @method static string slug(int $CountChar = 15)
  * @method static string nickName()
  * @method static string fullName()
  * @method static string getAddress()
