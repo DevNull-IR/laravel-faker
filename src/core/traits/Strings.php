@@ -101,6 +101,7 @@ Configure Automatic Updates درGroup Policy Editor - gpedit.msc بــا وار
     /**
      * @return string
      */
+    private $paragraph;
     public function paragraph(int $CountChar = null): string
     {
         $paragraphs = $this->paragraphs;
@@ -124,6 +125,7 @@ Configure Automatic Updates درGroup Policy Editor - gpedit.msc بــا وار
     /**
      * @return bool
      */
+
     public function addProductCategory(string $Category): bool
     {
         if (array_search($Category, $this->productCategory, true)){
@@ -137,6 +139,7 @@ Configure Automatic Updates درGroup Policy Editor - gpedit.msc بــا وار
     /**
      * @return string
      */
+    private $getProductCategory;
     public function getProductCategory(): string
     {
         return $this->productCategory[$this->rand($this->productCategory)];
@@ -144,6 +147,7 @@ Configure Automatic Updates درGroup Policy Editor - gpedit.msc بــا وار
     /**
      * @return string
      */
+    private $getDomain;
     public function getDomain(): string
     {
         $endDomain = [
@@ -160,7 +164,7 @@ Configure Automatic Updates درGroup Policy Editor - gpedit.msc بــا وار
         $protocol = ["http://", "https://"];
         return $protocol[rand(0, 1)] . Str::random(rand(5, 20)) . $endDomain[rand(0, 8)];
     }
-
+    private $getSiteAddress;
     public function getSiteAddress(): string
     {
         $Directory = [
@@ -179,7 +183,7 @@ Configure Automatic Updates درGroup Policy Editor - gpedit.msc بــا وار
         ];
         return $this->getDomain() . "/" . $Directory[$this->rand($Directory)] . Str::slug(substr(str_shuffle("qwer tyui opasdfgh AKHJSDU GJWE OPI sdf sdfg gfg5456c4vx 1cx2v1 xv4758-"), 0, 15), '-');
     }
-
+    private $getEmail;
     public function getEmail(): string
     {
         $emailPath = [

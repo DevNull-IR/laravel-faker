@@ -4,7 +4,7 @@ namespace DevNullIr\LaravelFaker\core\traits;
 
 trait address
 {
-    protected $city = [
+    protected $citys = [
         "آذربايجان شرقي",
         "آذربايجان غربي",
         "اردبيل",
@@ -514,16 +514,15 @@ trait address
         "هرات",
         "يزد"
     ];
-    public $getAddress = "sd";
     protected function rand(array $array = null): int{
-        return rand(0, count($array ?? $this->city) - 1);
+        return rand(0, count($array ?? $this->citys) - 1);
     }
-
+    private $getAddress;
     public function getAddress(): string
     {
         $mb = $this->street[$this->rand($this->street)];
         $address = "";
-        $address .= "ایران، " . $this->city[$this->rand()];
+        $address .= "ایران، " . $this->citys[$this->rand()];
         $address .= "، شهر " . $this->town[$this->rand($this->town)];
         $address .= "، خیابان " . $mb . "، ";
         $address .= $mb . " " . rand(1, 110);
@@ -531,12 +530,12 @@ trait address
         $address .= "، طبقه:" . rand(1, 10);
         return $address;
     }
-
+    private $getAddressArray;
     public function getAddressArray(): array
     {
         $array = [];
         $mb = $this->street[$this->rand($this->street)];
-        $city = $this->city[$this->rand()];
+        $city = $this->citys[$this->rand()];
         $town = $this->town[$this->rand($this->town)];
         $address = "";
         $address .= "ایران، " . $city;
@@ -554,7 +553,7 @@ trait address
         $array['address'] = $address;
         return $array;
     }
-
+    private $getMultiAddress;
     public function getMultiAddress(int $range = 3): array
     {
         $arrayAddress = [];
@@ -563,9 +562,9 @@ trait address
         }
         return $arrayAddress;
     }
-
+    private $city;
     public function city(): string
     {
-        return $this->city[$this->rand()];
+        return $this->citys[$this->rand()];
     }
 }

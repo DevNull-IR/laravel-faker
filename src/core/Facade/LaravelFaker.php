@@ -5,12 +5,15 @@ namespace DevNullIr\LaravelFaker\core\Facade;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @property string $getAddress
  * @method static bool addPeople(string $first_name, string $last_name, string $nick_name)
+ *
  * @property string $firstName
+ *
  * @method static string firstName()
+ *
  * @method static object Create()
  * @method static string lastName()
+ * @method static string userAgent()
  * @method static string nickName()
  * @method static string fullName()
  * @method static string getAddress()
